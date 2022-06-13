@@ -1,16 +1,15 @@
 #include "main.h"
-
 /**
- * main - swapping the values of two integers
- *@a: 1st integer is swapped
- *@b: 2nd integer is swapped
- * Return: Always 0.
+ * swap_int - updates the value it points to to 98.
+ * @a: input integer.
+ * @b: input integer
+ * Return: no return.
  */
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
-	int buffer
-		
-	buffer = *a
-	*a = *b;
-	*b = buffer;
+    int buffer;
+    
+    buffer = *a;
+    *a = *b;
+    *b = buffer;
 }
