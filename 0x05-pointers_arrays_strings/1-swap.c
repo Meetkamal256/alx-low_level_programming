@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 <<<<<<< HEAD
- * swap_int - updates the value it points to to 98.
- * @a: input integer.
+ * swap_int - updates the value it points to 98.
+ * @a: input integer
  * @b: input integer
  * Return: no return.
  */
