@@ -1,29 +1,36 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * _atoi - convert a number in a string to an integer
+ * main - generates random valid passwords
  *
- * @s: String to be converted
- *
- * Return: converted integer OR 0 if none
+ * Return: Always 0
  */
 
-int _atoi(char *s)
+int main(void)
 {
-	int sign_cache = 1;
-	int result = 0;
+	char k[200];
+	int num = 0;
+	int random = 0;
+	char *key = k;
 
-	while (s[0] != '\0')
+	srand(time(NULL));
+
+	while (num < 2645)
 	{
-		if (s[0] == '-')
-			sign_cache *= -1;
-		else if (s[0] >= '0' && s[0] <= '9')
-			result = (result * 10) + (s[0] - '0') * sign_cache;
-		else if (result)
-			break;
+		random = rand() % 122;
 
-		s++;
+		if (random > 32)
+		{
+			*key = random;
+			key = key + 1;
+			num += random;
+		}
 	}
 
-	return (result);
+	*key = (2772 - num);
+	*(key + 1) = '\n';
+	printf("%s", k);
+	return (0);
 }
